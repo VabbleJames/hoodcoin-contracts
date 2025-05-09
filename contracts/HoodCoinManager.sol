@@ -48,7 +48,7 @@ contract HoodCoinManager is Ownable, ReentrancyGuard {
         uint256 reserveBalance;
         bool migrated;
         bool readyForMigration;
-        uint8 stepsCount; // Number of steps (always 5 in your case)
+        uint8 stepsCount; // Number of steps
         mapping(uint8 => BondStep) steps; // Use mapping instead of array
     }
     mapping(bytes32 => address) public hoodTokens; // neighborhood hash -> token address
@@ -146,7 +146,7 @@ contract HoodCoinManager is Ownable, ReentrancyGuard {
 
     function setCreationFee(uint256 _newFee) external onlyOwner {
         // Optional: Add validation if needed
-        require(_newFee <= 0.1 ether, "Fee too high"); // Example max limit
+        require(_newFee <= 0.1 ether, "Fee too high");
 
         uint256 oldFee = CREATION_FEE;
         CREATION_FEE = _newFee;
@@ -156,7 +156,7 @@ contract HoodCoinManager is Ownable, ReentrancyGuard {
     }
 
     function setMigrationThreshold(uint256 _newThreshold) external onlyOwner {
-        // Optional: Add validation if needed
+
         require(_newThreshold >= 1 ether, "Threshold too low");
 
         uint256 oldThreshold = MIGRATION_THRESHOLD;
@@ -532,7 +532,7 @@ contract HoodCoinManager is Ownable, ReentrancyGuard {
                 i++;
             } else {
                 // Can only mint a portion of this step
-                // Using floor division since we can't mint partial tokens
+                // Using floor division
                 uint256 tokensAtStep = (reserveLeft * multiFactor) / step.price;
                 tokensOut += tokensAtStep;
                 break;
