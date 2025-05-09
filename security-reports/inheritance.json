@@ -1,0 +1,244 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "printers": [
+      {
+        "elements": [],
+        "description": "Inheritance\nChild_Contract -> Immediate_Base_Contracts [Not_Immediate_Base_Contracts]\n+ Ownable\n -> Context\n\n+ IERC20Errors\n\n+ IERC721Errors\n\n+ IERC1155Errors\n\n+ ERC20\n -> Context, IERC20, IERC20Metadata, IERC20Errors\n\n+ IERC20\n\n+ IERC20Metadata\n -> IERC20\n\n+ Context\n\n+ Panic\n\n+ ReentrancyGuard\n\n+ Math\n\n+ SafeCast\n\n+ HoodCoinBondingMath\n\n+ HoodCoinManager\n -> Ownable, ReentrancyGuard\n, [Context]\n\n+ HoodCoinToken\n -> ERC20, Ownable\n, [IERC20Errors, IERC20Metadata, IERC20, Context]\n\n+ IUniswapV2Factory\n\n+ IUniswapV2Router02\n\n+ ERC20Initializable\n -> Context, IERC20, IERC20Metadata, IERC20Errors\n\n+ MockPriceFeed\n\n+ MockUniswapRouter\n\n\nBase_Contract -> Immediate_Child_Contracts\n [Not_Immediate_Child_Contracts]\n\n+ Ownable\n -> HoodCoinManager, HoodCoinToken\n\n+ IERC20Errors\n -> ERC20, ERC20Initializable\n, [HoodCoinToken]\n\n+ IERC721Errors\n\n+ IERC1155Errors\n\n+ ERC20\n -> HoodCoinToken\n\n+ IERC20\n -> ERC20, IERC20Metadata, ERC20Initializable\n, [HoodCoinToken]\n\n+ IERC20Metadata\n -> ERC20, ERC20Initializable\n, [HoodCoinToken]\n\n+ Context\n -> Ownable, ERC20, ERC20Initializable\n, [HoodCoinManager, HoodCoinToken]\n\n+ Panic\n\n+ ReentrancyGuard\n -> HoodCoinManager\n\n+ Math\n\n+ SafeCast\n\n+ HoodCoinBondingMath\n\n+ HoodCoinManager\n\n+ HoodCoinToken\n\n+ IUniswapV2Factory\n\n+ IUniswapV2Router02\n\n+ ERC20Initializable\n\n+ MockPriceFeed\n\n+ MockUniswapRouter\n",
+        "markdown": "Inheritance\nChild_Contract -> Immediate_Base_Contracts [Not_Immediate_Base_Contracts]\n+ Ownable\n -> Context\n\n+ IERC20Errors\n\n+ IERC721Errors\n\n+ IERC1155Errors\n\n+ ERC20\n -> Context, IERC20, IERC20Metadata, IERC20Errors\n\n+ IERC20\n\n+ IERC20Metadata\n -> IERC20\n\n+ Context\n\n+ Panic\n\n+ ReentrancyGuard\n\n+ Math\n\n+ SafeCast\n\n+ HoodCoinBondingMath\n\n+ HoodCoinManager\n -> Ownable, ReentrancyGuard\n, [Context]\n\n+ HoodCoinToken\n -> ERC20, Ownable\n, [IERC20Errors, IERC20Metadata, IERC20, Context]\n\n+ IUniswapV2Factory\n\n+ IUniswapV2Router02\n\n+ ERC20Initializable\n -> Context, IERC20, IERC20Metadata, IERC20Errors\n\n+ MockPriceFeed\n\n+ MockUniswapRouter\n\n\nBase_Contract -> Immediate_Child_Contracts\n [Not_Immediate_Child_Contracts]\n\n+ Ownable\n -> HoodCoinManager, HoodCoinToken\n\n+ IERC20Errors\n -> ERC20, ERC20Initializable\n, [HoodCoinToken]\n\n+ IERC721Errors\n\n+ IERC1155Errors\n\n+ ERC20\n -> HoodCoinToken\n\n+ IERC20\n -> ERC20, IERC20Metadata, ERC20Initializable\n, [HoodCoinToken]\n\n+ IERC20Metadata\n -> ERC20, ERC20Initializable\n, [HoodCoinToken]\n\n+ Context\n -> Ownable, ERC20, ERC20Initializable\n, [HoodCoinManager, HoodCoinToken]\n\n+ Panic\n\n+ ReentrancyGuard\n -> HoodCoinManager\n\n+ Math\n\n+ SafeCast\n\n+ HoodCoinBondingMath\n\n+ HoodCoinManager\n\n+ HoodCoinToken\n\n+ IUniswapV2Factory\n\n+ IUniswapV2Router02\n\n+ ERC20Initializable\n\n+ MockPriceFeed\n\n+ MockUniswapRouter\n",
+        "first_markdown_element": "",
+        "id": "24aa04341dc2a25cb2ebde808abe329f60bb26df5b0ead0b2321b038d5ff1fc9",
+        "additional_fields": {
+          "child_to_base": {
+            "Ownable": {
+              "immediate": [
+                "Context"
+              ],
+              "not_immediate": []
+            },
+            "IERC20Errors": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "IERC721Errors": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "IERC1155Errors": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "ERC20": {
+              "immediate": [
+                "Context",
+                "IERC20",
+                "IERC20Metadata",
+                "IERC20Errors"
+              ],
+              "not_immediate": []
+            },
+            "IERC20": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "IERC20Metadata": {
+              "immediate": [
+                "IERC20"
+              ],
+              "not_immediate": []
+            },
+            "Context": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "Panic": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "ReentrancyGuard": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "Math": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "SafeCast": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "HoodCoinBondingMath": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "HoodCoinManager": {
+              "immediate": [
+                "Ownable",
+                "ReentrancyGuard"
+              ],
+              "not_immediate": [
+                "Context"
+              ]
+            },
+            "HoodCoinToken": {
+              "immediate": [
+                "ERC20",
+                "Ownable"
+              ],
+              "not_immediate": [
+                "IERC20Errors",
+                "IERC20Metadata",
+                "IERC20",
+                "Context"
+              ]
+            },
+            "IUniswapV2Factory": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "IUniswapV2Router02": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "ERC20Initializable": {
+              "immediate": [
+                "Context",
+                "IERC20",
+                "IERC20Metadata",
+                "IERC20Errors"
+              ],
+              "not_immediate": []
+            },
+            "MockPriceFeed": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "MockUniswapRouter": {
+              "immediate": [],
+              "not_immediate": []
+            }
+          },
+          "base_to_child": {
+            "Ownable": {
+              "immediate": [
+                "HoodCoinManager",
+                "HoodCoinToken"
+              ],
+              "not_immediate": []
+            },
+            "IERC20Errors": {
+              "immediate": [
+                "ERC20",
+                "ERC20Initializable"
+              ],
+              "not_immediate": [
+                "ERC20",
+                "ERC20Initializable"
+              ]
+            },
+            "IERC721Errors": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "IERC1155Errors": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "ERC20": {
+              "immediate": [
+                "HoodCoinToken"
+              ],
+              "not_immediate": []
+            },
+            "IERC20": {
+              "immediate": [
+                "ERC20",
+                "IERC20Metadata",
+                "ERC20Initializable"
+              ],
+              "not_immediate": [
+                "ERC20",
+                "IERC20Metadata",
+                "ERC20Initializable"
+              ]
+            },
+            "IERC20Metadata": {
+              "immediate": [
+                "ERC20",
+                "ERC20Initializable"
+              ],
+              "not_immediate": [
+                "ERC20",
+                "ERC20Initializable"
+              ]
+            },
+            "Context": {
+              "immediate": [
+                "Ownable",
+                "ERC20",
+                "ERC20Initializable"
+              ],
+              "not_immediate": [
+                "Ownable",
+                "ERC20",
+                "ERC20Initializable"
+              ]
+            },
+            "Panic": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "ReentrancyGuard": {
+              "immediate": [
+                "HoodCoinManager"
+              ],
+              "not_immediate": []
+            },
+            "Math": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "SafeCast": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "HoodCoinBondingMath": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "HoodCoinManager": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "HoodCoinToken": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "IUniswapV2Factory": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "IUniswapV2Router02": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "ERC20Initializable": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "MockPriceFeed": {
+              "immediate": [],
+              "not_immediate": []
+            },
+            "MockUniswapRouter": {
+              "immediate": [],
+              "not_immediate": []
+            }
+          }
+        },
+        "printer": "inheritance"
+      }
+    ]
+  }
+}

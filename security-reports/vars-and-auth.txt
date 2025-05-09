@@ -1,0 +1,411 @@
+'npx hardhat clean' running (wd: C:\Users\JInfi\hoodcoin-contracts)
+'npx hardhat clean --global' running (wd: C:\Users\JInfi\hoodcoin-contracts)
+Problem deserializing hardhat configuration, using defaults: Expecting value: line 1 column 1 (char 0)
+'npx hardhat compile --force' running (wd: C:\Users\JInfi\hoodcoin-contracts)
+
+Contract Ownable
++----------------------+-------------------------+--------------------------+
+| Function             | State variables written | Conditions on msg.sender |
++----------------------+-------------------------+--------------------------+
+| _msgSender           | []                      | []                       |
+| _msgData             | []                      | []                       |
+| _contextSuffixLength | []                      | []                       |
+| constructor          | ['_owner']              | []                       |
+| owner                | []                      | []                       |
+| _checkOwner          | []                      | []                       |
+| renounceOwnership    | ['_owner']              | []                       |
+| transferOwnership    | ['_owner']              | []                       |
+| _transferOwnership   | ['_owner']              | []                       |
++----------------------+-------------------------+--------------------------+
+
+Contract IERC20Errors
++----------+-------------------------+--------------------------+
+| Function | State variables written | Conditions on msg.sender |
++----------+-------------------------+--------------------------+
++----------+-------------------------+--------------------------+
+
+Contract IERC721Errors
++----------+-------------------------+--------------------------+
+| Function | State variables written | Conditions on msg.sender |
++----------+-------------------------+--------------------------+
++----------+-------------------------+--------------------------+
+
+Contract IERC1155Errors
++----------+-------------------------+--------------------------+
+| Function | State variables written | Conditions on msg.sender |
++----------+-------------------------+--------------------------+
++----------+-------------------------+--------------------------+
+
+Contract ERC20
++----------------------+----------------------------------------------+--------------------------+
+| Function             | State variables written                      | Conditions on msg.sender |
++----------------------+----------------------------------------------+--------------------------+
+| name                 | []                                           | []                       |
+| symbol               | []                                           | []                       |
+| decimals             | []                                           | []                       |
+| totalSupply          | []                                           | []                       |
+| balanceOf            | []                                           | []                       |
+| transfer             | []                                           | []                       |
+| allowance            | []                                           | []                       |
+| approve              | []                                           | []                       |
+| transferFrom         | []                                           | []                       |
+| _msgSender           | []                                           | []                       |
+| _msgData             | []                                           | []                       |
+| _contextSuffixLength | []                                           | []                       |
+| constructor          | ['_name', '_symbol']                         | []                       |
+| name                 | []                                           | []                       |
+| symbol               | []                                           | []                       |
+| decimals             | []                                           | []                       |
+| totalSupply          | []                                           | []                       |
+| balanceOf            | []                                           | []                       |
+| transfer             | ['_balances', '_totalSupply']                | []                       |
+| allowance            | []                                           | []                       |
+| approve              | ['_allowances']                              | []                       |
+| transferFrom         | ['_allowances', '_balances', '_totalSupply'] | []                       |
+| _transfer            | ['_balances', '_totalSupply']                | []                       |
+| _update              | ['_balances', '_totalSupply']                | []                       |
+| _mint                | ['_balances', '_totalSupply']                | []                       |
+| _burn                | ['_balances', '_totalSupply']                | []                       |
+| _approve             | ['_allowances']                              | []                       |
+| _approve             | ['_allowances']                              | []                       |
+| _spendAllowance      | ['_allowances']                              | []                       |
++----------------------+----------------------------------------------+--------------------------+
+
+Contract IERC20
++--------------+-------------------------+--------------------------+
+| Function     | State variables written | Conditions on msg.sender |
++--------------+-------------------------+--------------------------+
+| totalSupply  | []                      | []                       |
+| balanceOf    | []                      | []                       |
+| transfer     | []                      | []                       |
+| allowance    | []                      | []                       |
+| approve      | []                      | []                       |
+| transferFrom | []                      | []                       |
++--------------+-------------------------+--------------------------+
+
+Contract IERC20Metadata
++--------------+-------------------------+--------------------------+
+| Function     | State variables written | Conditions on msg.sender |
++--------------+-------------------------+--------------------------+
+| totalSupply  | []                      | []                       |
+| balanceOf    | []                      | []                       |
+| transfer     | []                      | []                       |
+| allowance    | []                      | []                       |
+| approve      | []                      | []                       |
+| transferFrom | []                      | []                       |
+| name         | []                      | []                       |
+| symbol       | []                      | []                       |
+| decimals     | []                      | []                       |
++--------------+-------------------------+--------------------------+
+
+Contract Context
++----------------------+-------------------------+--------------------------+
+| Function             | State variables written | Conditions on msg.sender |
++----------------------+-------------------------+--------------------------+
+| _msgSender           | []                      | []                       |
+| _msgData             | []                      | []                       |
+| _contextSuffixLength | []                      | []                       |
++----------------------+-------------------------+--------------------------+
+
+Contract Panic
++-------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+
+| Function                            | State variables written                                                                                                                                                                                 | Conditions on msg.sender |
++-------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+
+| panic                               | []                                                                                                                                                                                                      | []                       |
+| slitherConstructorConstantVariables | ['ARRAY_OUT_OF_BOUNDS', 'ASSERT', 'DIVISION_BY_ZERO', 'EMPTY_ARRAY_POP', 'ENUM_CONVERSION_ERROR', 'GENERIC', 'INVALID_INTERNAL_FUNCTION', 'RESOURCE_ERROR', 'STORAGE_ENCODING_ERROR', 'UNDER_OVERFLOW'] | []                       |
++-------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+
+
+Contract ReentrancyGuard
++-------------------------------------+----------------------------+--------------------------+
+| Function                            | State variables written    | Conditions on msg.sender |
++-------------------------------------+----------------------------+--------------------------+
+| constructor                         | ['_status']                | []                       |
+| _nonReentrantBefore                 | ['_status']                | []                       |
+| _nonReentrantAfter                  | ['_status']                | []                       |
+| _reentrancyGuardEntered             | []                         | []                       |
+| slitherConstructorConstantVariables | ['ENTERED', 'NOT_ENTERED'] | []                       |
++-------------------------------------+----------------------------+--------------------------+
+
+Contract Math
++------------------+-------------------------+--------------------------+
+| Function         | State variables written | Conditions on msg.sender |
++------------------+-------------------------+--------------------------+
+| tryAdd           | []                      | []                       |
+| trySub           | []                      | []                       |
+| tryMul           | []                      | []                       |
+| tryDiv           | []                      | []                       |
+| tryMod           | []                      | []                       |
+| ternary          | []                      | []                       |
+| max              | []                      | []                       |
+| min              | []                      | []                       |
+| average          | []                      | []                       |
+| ceilDiv          | []                      | []                       |
+| mulDiv           | []                      | []                       |
+| mulDiv           | []                      | []                       |
+| invMod           | []                      | []                       |
+| invModPrime      | []                      | []                       |
+| modExp           | []                      | []                       |
+| tryModExp        | []                      | []                       |
+| modExp           | []                      | []                       |
+| tryModExp        | []                      | []                       |
+| _zeroBytes       | []                      | []                       |
+| sqrt             | []                      | []                       |
+| sqrt             | []                      | []                       |
+| log2             | []                      | []                       |
+| log2             | []                      | []                       |
+| log10            | []                      | []                       |
+| log10            | []                      | []                       |
+| log256           | []                      | []                       |
+| log256           | []                      | []                       |
+| unsignedRoundsUp | []                      | []                       |
++------------------+-------------------------+--------------------------+
+
+Contract SafeCast
++-----------+-------------------------+--------------------------+
+| Function  | State variables written | Conditions on msg.sender |
++-----------+-------------------------+--------------------------+
+| toUint248 | []                      | []                       |
+| toUint240 | []                      | []                       |
+| toUint232 | []                      | []                       |
+| toUint224 | []                      | []                       |
+| toUint216 | []                      | []                       |
+| toUint208 | []                      | []                       |
+| toUint200 | []                      | []                       |
+| toUint192 | []                      | []                       |
+| toUint184 | []                      | []                       |
+| toUint176 | []                      | []                       |
+| toUint168 | []                      | []                       |
+| toUint160 | []                      | []                       |
+| toUint152 | []                      | []                       |
+| toUint144 | []                      | []                       |
+| toUint136 | []                      | []                       |
+| toUint128 | []                      | []                       |
+| toUint120 | []                      | []                       |
+| toUint112 | []                      | []                       |
+| toUint104 | []                      | []                       |
+| toUint96  | []                      | []                       |
+| toUint88  | []                      | []                       |
+| toUint80  | []                      | []                       |
+| toUint72  | []                      | []                       |
+| toUint64  | []                      | []                       |
+| toUint56  | []                      | []                       |
+| toUint48  | []                      | []                       |
+| toUint40  | []                      | []                       |
+| toUint32  | []                      | []                       |
+| toUint24  | []                      | []                       |
+| toUint16  | []                      | []                       |
+| toUint8   | []                      | []                       |
+| toUint256 | []                      | []                       |
+| toInt248  | []                      | []                       |
+| toInt240  | []                      | []                       |
+| toInt232  | []                      | []                       |
+| toInt224  | []                      | []                       |
+| toInt216  | []                      | []                       |
+| toInt208  | []                      | []                       |
+| toInt200  | []                      | []                       |
+| toInt192  | []                      | []                       |
+| toInt184  | []                      | []                       |
+| toInt176  | []                      | []                       |
+| toInt168  | []                      | []                       |
+| toInt160  | []                      | []                       |
+| toInt152  | []                      | []                       |
+| toInt144  | []                      | []                       |
+| toInt136  | []                      | []                       |
+| toInt128  | []                      | []                       |
+| toInt120  | []                      | []                       |
+| toInt112  | []                      | []                       |
+| toInt104  | []                      | []                       |
+| toInt96   | []                      | []                       |
+| toInt88   | []                      | []                       |
+| toInt80   | []                      | []                       |
+| toInt72   | []                      | []                       |
+| toInt64   | []                      | []                       |
+| toInt56   | []                      | []                       |
+| toInt48   | []                      | []                       |
+| toInt40   | []                      | []                       |
+| toInt32   | []                      | []                       |
+| toInt24   | []                      | []                       |
+| toInt16   | []                      | []                       |
+| toInt8    | []                      | []                       |
+| toInt256  | []                      | []                       |
+| toUint    | []                      | []                       |
++-----------+-------------------------+--------------------------+
+
+Contract HoodCoinBondingMath
++---------------------+-------------------------+--------------------------+
+| Function            | State variables written | Conditions on msg.sender |
++---------------------+-------------------------+--------------------------+
+| calculateMintCost   | []                      | []                       |
+| calculateBurnRefund | []                      | []                       |
+| getCurrentStep      | []                      | []                       |
+| getCurrentPrice     | []                      | []                       |
++---------------------+-------------------------+--------------------------+
+
+Contract HoodCoinManager
++-------------------------------------+-----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Function                            | State variables written                                                                                   | Conditions on msg.sender                                                                                                                                                                                                |
++-------------------------------------+-----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| constructor                         | ['_status']                                                                                               | []                                                                                                                                                                                                                      |
+| _nonReentrantBefore                 | ['_status']                                                                                               | []                                                                                                                                                                                                                      |
+| _nonReentrantAfter                  | ['_status']                                                                                               | []                                                                                                                                                                                                                      |
+| _reentrancyGuardEntered             | []                                                                                                        | []                                                                                                                                                                                                                      |
+| constructor                         | ['_owner']                                                                                                | []                                                                                                                                                                                                                      |
+| owner                               | []                                                                                                        | []                                                                                                                                                                                                                      |
+| _checkOwner                         | []                                                                                                        | []                                                                                                                                                                                                                      |
+| renounceOwnership                   | ['_owner']                                                                                                | []                                                                                                                                                                                                                      |
+| transferOwnership                   | ['_owner']                                                                                                | []                                                                                                                                                                                                                      |
+| _transferOwnership                  | ['_owner']                                                                                                | []                                                                                                                                                                                                                      |
+| _msgSender                          | []                                                                                                        | []                                                                                                                                                                                                                      |
+| _msgData                            | []                                                                                                        | []                                                                                                                                                                                                                      |
+| _contextSuffixLength                | []                                                                                                        | []                                                                                                                                                                                                                      |
+| constructor                         | ['CREATION_FEE', 'MIGRATION_THRESHOLD', 'UNISWAP_ROUTER', '_owner', 'isVerifier', 'migrator', 'treasury'] | []                                                                                                                                                                                                                      |
+| setCreationFee                      | ['CREATION_FEE']                                                                                          | []                                                                                                                                                                                                                      |
+| setMigrationThreshold               | ['MIGRATION_THRESHOLD']                                                                                   | []                                                                                                                                                                                                                      |
+| setMigrator                         | ['migrator']                                                                                              | []                                                                                                                                                                                                                      |
+| verifyLocation                      | ['verifiedLocations']                                                                                     | ['require(bool,string)(isVerifier[msg.sender],Not a verifier)', 'require(bool,string)(isVerifier[msg.sender],Not a verifier)']                                                                                          |
+| addVerifier                         | ['isVerifier']                                                                                            | []                                                                                                                                                                                                                      |
+| removeVerifier                      | ['isVerifier']                                                                                            | []                                                                                                                                                                                                                      |
+| createHoodToken                     | ['_status', 'allTokens', 'hoodTokens', 'tokenInfo']                                                       | ['ethSent > ethCost && msg.sender == tx.origin']                                                                                                                                                                        |
+| _getStepsArray                      | []                                                                                                        | []                                                                                                                                                                                                                      |
+| mintTokens                          | ['_status', 'tokenInfo']                                                                                  | ['ethSent > ethCost && msg.sender == tx.origin']                                                                                                                                                                        |
+| _mintTokens                         | ['tokenInfo']                                                                                             | ['ethSent > ethCost && msg.sender == tx.origin']                                                                                                                                                                        |
+| _safeTransferETH                    | []                                                                                                        | []                                                                                                                                                                                                                      |
+| _getRevertMsg                       | []                                                                                                        | []                                                                                                                                                                                                                      |
+| calculateTokensForEth               | []                                                                                                        | []                                                                                                                                                                                                                      |
+| burnTokens                          | ['_status', 'tokenInfo']                                                                                  | ['require(bool,string)(tokenAmount <= tokenContract.balanceOf(msg.sender),Insufficient token balance)', 'require(bool,string)(tokenContract.transferFrom(msg.sender,address(this),tokenAmount),Token transfer failed)'] |
+| _checkAndMigrate                    | ['tokenInfo']                                                                                             | []                                                                                                                                                                                                                      |
+| migrateReadyToken                   | ['tokenInfo']                                                                                             | ['require(bool,string)(msg.sender == migrator,Only migrator can call)']                                                                                                                                                 |
+| getTokensReadyForMigration          | []                                                                                                        | []                                                                                                                                                                                                                      |
+| _migrateToUniswap                   | ['tokenInfo']                                                                                             | []                                                                                                                                                                                                                      |
+| getCurrentTokenPrice                | []                                                                                                        | []                                                                                                                                                                                                                      |
+| getReservedTokenAmount              | []                                                                                                        | []                                                                                                                                                                                                                      |
+| triggerMigration                    | ['tokenInfo']                                                                                             | []                                                                                                                                                                                                                      |
+| getHoodToken                        | []                                                                                                        | []                                                                                                                                                                                                                      |
+| isUserVerifiedForHood               | []                                                                                                        | []                                                                                                                                                                                                                      |
+| getTokens                           | []                                                                                                        | []                                                                                                                                                                                                                      |
+| getTokenCount                       | []                                                                                                        | []                                                                                                                                                                                                                      |
+| getMigrationProgress                | []                                                                                                        | []                                                                                                                                                                                                                      |
+| receive                             | []                                                                                                        | []                                                                                                                                                                                                                      |
+| slitherConstructorConstantVariables | ['BURN_ROYALTY', 'CURVE_SUPPLY', 'MAX_SUPPLY', 'MINT_ROYALTY', 'RESERVED_TOKENS']                         | []                                                                                                                                                                                                                      |
++-------------------------------------+-----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Contract HoodCoinToken
++----------------------+----------------------------------------------+--------------------------+
+| Function             | State variables written                      | Conditions on msg.sender |
++----------------------+----------------------------------------------+--------------------------+
+| constructor          | ['_owner']                                   | []                       |
+| owner                | []                                           | []                       |
+| _checkOwner          | []                                           | []                       |
+| renounceOwnership    | ['_owner']                                   | []                       |
+| transferOwnership    | ['_owner']                                   | []                       |
+| _transferOwnership   | ['_owner']                                   | []                       |
+| _msgSender           | []                                           | []                       |
+| _msgData             | []                                           | []                       |
+| _contextSuffixLength | []                                           | []                       |
+| constructor          | ['_name', '_symbol']                         | []                       |
+| name                 | []                                           | []                       |
+| symbol               | []                                           | []                       |
+| decimals             | []                                           | []                       |
+| totalSupply          | []                                           | []                       |
+| balanceOf            | []                                           | []                       |
+| transfer             | ['_balances', '_totalSupply']                | []                       |
+| allowance            | []                                           | []                       |
+| approve              | ['_allowances']                              | []                       |
+| transferFrom         | ['_allowances', '_balances', '_totalSupply'] | []                       |
+| _transfer            | ['_balances', '_totalSupply']                | []                       |
+| _update              | ['_balances', '_totalSupply']                | []                       |
+| _mint                | ['_balances', '_totalSupply']                | []                       |
+| _burn                | ['_balances', '_totalSupply']                | []                       |
+| _approve             | ['_allowances']                              | []                       |
+| _approve             | ['_allowances']                              | []                       |
+| _spendAllowance      | ['_allowances']                              | []                       |
+| name                 | []                                           | []                       |
+| symbol               | []                                           | []                       |
+| decimals             | []                                           | []                       |
+| totalSupply          | []                                           | []                       |
+| balanceOf            | []                                           | []                       |
+| transfer             | []                                           | []                       |
+| allowance            | []                                           | []                       |
+| approve              | []                                           | []                       |
+| transferFrom         | []                                           | []                       |
+| constructor          | ['_name', '_owner', '_symbol']               | []                       |
+| mint                 | ['_balances', '_totalSupply']                | []                       |
+| burn                 | ['_balances', '_totalSupply']                | []                       |
++----------------------+----------------------------------------------+--------------------------+
+
+Contract IUniswapV2Factory
++------------+-------------------------+--------------------------+
+| Function   | State variables written | Conditions on msg.sender |
++------------+-------------------------+--------------------------+
+| getPair    | []                      | []                       |
+| createPair | []                      | []                       |
++------------+-------------------------+--------------------------+
+
+Contract IUniswapV2Router02
++-----------------+-------------------------+--------------------------+
+| Function        | State variables written | Conditions on msg.sender |
++-----------------+-------------------------+--------------------------+
+| factory         | []                      | []                       |
+| WETH            | []                      | []                       |
+| addLiquidityETH | []                      | []                       |
++-----------------+-------------------------+--------------------------+
+
+Contract ERC20Initializable
++----------------------+----------------------------------------------+--------------------------+
+| Function             | State variables written                      | Conditions on msg.sender |
++----------------------+----------------------------------------------+--------------------------+
+| name                 | []                                           | []                       |
+| symbol               | []                                           | []                       |
+| decimals             | []                                           | []                       |
+| totalSupply          | []                                           | []                       |
+| balanceOf            | []                                           | []                       |
+| transfer             | []                                           | []                       |
+| allowance            | []                                           | []                       |
+| approve              | []                                           | []                       |
+| transferFrom         | []                                           | []                       |
+| _msgSender           | []                                           | []                       |
+| _msgData             | []                                           | []                       |
+| _contextSuffixLength | []                                           | []                       |
+| name                 | []                                           | []                       |
+| symbol               | []                                           | []                       |
+| decimals             | []                                           | []                       |
+| totalSupply          | []                                           | []                       |
+| balanceOf            | []                                           | []                       |
+| transfer             | ['_balances', '_totalSupply']                | []                       |
+| allowance            | []                                           | []                       |
+| approve              | ['_allowances']                              | []                       |
+| transferFrom         | ['_allowances', '_balances', '_totalSupply'] | []                       |
+| _transfer            | ['_balances', '_totalSupply']                | []                       |
+| _update              | ['_balances', '_totalSupply']                | []                       |
+| _mint                | ['_balances', '_totalSupply']                | []                       |
+| _burn                | ['_balances', '_totalSupply']                | []                       |
+| _approve             | ['_allowances']                              | []                       |
+| _approve             | ['_allowances']                              | []                       |
+| _spendAllowance      | ['_allowances']                              | []                       |
++----------------------+----------------------------------------------+--------------------------+
+
+Contract MockPriceFeed
++-------------------------------------+-------------------------+--------------------------+
+| Function                            | State variables written | Conditions on msg.sender |
++-------------------------------------+-------------------------+--------------------------+
+| constructor                         | ['price']               | []                       |
+| setLatestPrice                      | ['price']               | []                       |
+| latestRoundData                     | []                      | []                       |
+| decimals                            | []                      | []                       |
+| description                         | []                      | []                       |
+| version                             | []                      | []                       |
+| getRoundData                        | []                      | []                       |
+| slitherConstructorConstantVariables | ['DECIMALS']            | []                       |
++-------------------------------------+-------------------------+--------------------------+
+
+Contract MockUniswapRouter
++-----------------+-------------------------+--------------------------+
+| Function        | State variables written | Conditions on msg.sender |
++-----------------+-------------------------+--------------------------+
+| constructor     | ['WETH', 'factory']     | []                       |
+| addLiquidityETH | []                      | []                       |
+| getPair         | []                      | []                       |
+| createPair      | []                      | []                       |
++-----------------+-------------------------+--------------------------+
+
+. analyzed (20 contracts)

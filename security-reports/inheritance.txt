@@ -1,0 +1,110 @@
+'npx hardhat clean' running (wd: C:\Users\JInfi\hoodcoin-contracts)
+'npx hardhat clean --global' running (wd: C:\Users\JInfi\hoodcoin-contracts)
+Problem deserializing hardhat configuration, using defaults: Expecting value: line 1 column 1 (char 0)
+'npx hardhat compile --force' running (wd: C:\Users\JInfi\hoodcoin-contracts)
+Inheritance
+Child_Contract -> Immediate_Base_Contracts [Not_Immediate_Base_Contracts]
++ Ownable
+ -> Context
+
++ IERC20Errors
+
++ IERC721Errors
+
++ IERC1155Errors
+
++ ERC20
+ -> Context, IERC20, IERC20Metadata, IERC20Errors
+
++ IERC20
+
++ IERC20Metadata
+ -> IERC20
+
++ Context
+
++ Panic
+
++ ReentrancyGuard
+
++ Math
+
++ SafeCast
+
++ HoodCoinBondingMath
+
++ HoodCoinManager
+ -> Ownable, ReentrancyGuard
+, [Context]
+
++ HoodCoinToken
+ -> ERC20, Ownable
+, [IERC20Errors, IERC20Metadata, IERC20, Context]
+
++ IUniswapV2Factory
+
++ IUniswapV2Router02
+
++ ERC20Initializable
+ -> Context, IERC20, IERC20Metadata, IERC20Errors
+
++ MockPriceFeed
+
++ MockUniswapRouter
+
+
+Base_Contract -> Immediate_Child_Contracts
+ [Not_Immediate_Child_Contracts]
+
++ Ownable
+ -> HoodCoinManager, HoodCoinToken
+
++ IERC20Errors
+ -> ERC20, ERC20Initializable
+, [HoodCoinToken]
+
++ IERC721Errors
+
++ IERC1155Errors
+
++ ERC20
+ -> HoodCoinToken
+
++ IERC20
+ -> ERC20, IERC20Metadata, ERC20Initializable
+, [HoodCoinToken]
+
++ IERC20Metadata
+ -> ERC20, ERC20Initializable
+, [HoodCoinToken]
+
++ Context
+ -> Ownable, ERC20, ERC20Initializable
+, [HoodCoinManager, HoodCoinToken]
+
++ Panic
+
++ ReentrancyGuard
+ -> HoodCoinManager
+
++ Math
+
++ SafeCast
+
++ HoodCoinBondingMath
+
++ HoodCoinManager
+
++ HoodCoinToken
+
++ IUniswapV2Factory
+
++ IUniswapV2Router02
+
++ ERC20Initializable
+
++ MockPriceFeed
+
++ MockUniswapRouter
+
+. analyzed (20 contracts)

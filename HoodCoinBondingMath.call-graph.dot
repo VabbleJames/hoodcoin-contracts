@@ -1,0 +1,20 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_4814_HoodCoinBondingMath {
+label = "HoodCoinBondingMath"
+"4814_calculateBurnRefund" [label="calculateBurnRefund"]
+"4814_getCurrentPrice" [label="getCurrentPrice"]
+"4814_getCurrentStep" [label="getCurrentStep"]
+"4814_calculateMintCost" [label="calculateMintCost"]
+"4814_calculateBurnRefund" -> "4814_getCurrentStep"
+"4814_calculateMintCost" -> "4814_getCurrentStep"
+"4814_getCurrentPrice" -> "4814_getCurrentStep"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"revert(string)" 
+"4814_calculateMintCost" -> "revert(string)"
+"4814_calculateBurnRefund" -> "revert(string)"
+"4814_getCurrentStep" -> "revert(string)"
+}
+}

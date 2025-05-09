@@ -1,0 +1,142 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_4425_SafeCast {
+label = "SafeCast"
+"4425_toUint168" [label="toUint168"]
+"4425_toUint144" [label="toUint144"]
+"4425_toUint40" [label="toUint40"]
+"4425_toInt176" [label="toInt176"]
+"4425_toInt16" [label="toInt16"]
+"4425_toUint56" [label="toUint56"]
+"4425_toInt184" [label="toInt184"]
+"4425_toUint152" [label="toUint152"]
+"4425_toInt248" [label="toInt248"]
+"4425_toUint16" [label="toUint16"]
+"4425_toInt56" [label="toInt56"]
+"4425_toUint232" [label="toUint232"]
+"4425_toInt136" [label="toInt136"]
+"4425_toInt40" [label="toInt40"]
+"4425_toUint" [label="toUint"]
+"4425_toUint80" [label="toUint80"]
+"4425_toUint120" [label="toUint120"]
+"4425_toInt192" [label="toInt192"]
+"4425_toUint88" [label="toUint88"]
+"4425_toInt104" [label="toInt104"]
+"4425_toInt8" [label="toInt8"]
+"4425_toUint248" [label="toUint248"]
+"4425_toInt152" [label="toInt152"]
+"4425_toUint32" [label="toUint32"]
+"4425_toUint208" [label="toUint208"]
+"4425_toInt48" [label="toInt48"]
+"4425_toInt168" [label="toInt168"]
+"4425_toInt240" [label="toInt240"]
+"4425_toUint160" [label="toUint160"]
+"4425_toInt128" [label="toInt128"]
+"4425_toInt72" [label="toInt72"]
+"4425_toInt88" [label="toInt88"]
+"4425_toUint240" [label="toUint240"]
+"4425_toUint72" [label="toUint72"]
+"4425_toInt224" [label="toInt224"]
+"4425_toUint200" [label="toUint200"]
+"4425_toUint136" [label="toUint136"]
+"4425_toUint24" [label="toUint24"]
+"4425_toUint184" [label="toUint184"]
+"4425_toUint8" [label="toUint8"]
+"4425_toInt96" [label="toInt96"]
+"4425_toUint48" [label="toUint48"]
+"4425_toInt232" [label="toInt232"]
+"4425_toUint192" [label="toUint192"]
+"4425_toUint64" [label="toUint64"]
+"4425_toUint176" [label="toUint176"]
+"4425_toInt24" [label="toInt24"]
+"4425_toUint112" [label="toUint112"]
+"4425_toInt208" [label="toInt208"]
+"4425_toInt120" [label="toInt120"]
+"4425_toInt112" [label="toInt112"]
+"4425_toUint216" [label="toUint216"]
+"4425_toUint128" [label="toUint128"]
+"4425_toInt80" [label="toInt80"]
+"4425_toInt32" [label="toInt32"]
+"4425_toInt256" [label="toInt256"]
+"4425_toInt216" [label="toInt216"]
+"4425_toInt64" [label="toInt64"]
+"4425_toUint224" [label="toUint224"]
+"4425_toInt200" [label="toInt200"]
+"4425_toInt160" [label="toInt160"]
+"4425_toUint104" [label="toUint104"]
+"4425_toUint96" [label="toUint96"]
+"4425_toInt144" [label="toInt144"]
+"4425_toUint256" [label="toUint256"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"revert SafeCastOverflowedUintDowncast(uint8,uint256)" 
+"revert SafeCastOverflowedIntDowncast(uint8,int256)" 
+"revert SafeCastOverflowedIntToUint(int256)" 
+"revert SafeCastOverflowedUintToInt(uint256)" 
+"4425_toInt160" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toInt112" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toUint16" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toInt216" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toInt192" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toUint184" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toInt8" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toUint24" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toInt144" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toUint72" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toInt40" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toUint216" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toUint40" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toUint96" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toInt128" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toUint32" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toUint120" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toUint112" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toInt88" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toUint168" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toUint144" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toInt240" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toInt224" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toInt48" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toInt184" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toInt200" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toUint224" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toUint8" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toUint136" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toUint88" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toInt72" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toUint160" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toUint128" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toUint208" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toUint104" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toInt80" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toUint48" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toInt176" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toInt248" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toInt136" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toInt208" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toInt232" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toUint200" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toInt96" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toInt32" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toInt16" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toUint176" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toUint80" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toUint64" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toInt104" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toInt24" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toInt120" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toInt152" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toInt64" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toInt168" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4425_toUint232" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toUint192" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toUint56" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toUint256" -> "revert SafeCastOverflowedIntToUint(int256)"
+"4425_toInt256" -> "revert SafeCastOverflowedUintToInt(uint256)"
+"4425_toUint248" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toUint240" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toUint152" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4425_toInt56" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+}
+}

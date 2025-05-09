@@ -1,0 +1,95 @@
+'npx hardhat clean' running (wd: C:\Users\JInfi\hoodcoin-contracts)
+'npx hardhat clean --global' running (wd: C:\Users\JInfi\hoodcoin-contracts)
+Problem deserializing hardhat configuration, using defaults: Expecting value: line 1 column 1 (char 0)
+'npx hardhat compile --force' running (wd: C:\Users\JInfi\hoodcoin-contracts)
+
+Reentrancy in HoodCoinManager.createHoodToken(uint256) (contracts/HoodCoinManager.sol#211-305):
+	External calls:
+	- success = _safeTransferETH(treasury,CREATION_FEE) (contracts/HoodCoinManager.sol#282)
+		- (success,None) = to.call{gas: 2300,value: amount}() (contracts/HoodCoinManager.sol#465)
+	- _mintTokens(tokenAddress,initialPurchaseAmount,type()(uint256).max,msg.sender) (contracts/HoodCoinManager.sol#287-292)
+		- (success,None) = to.call{gas: 2300,value: amount}() (contracts/HoodCoinManager.sol#465)
+		- tokenContract.mint(receiver,tokensToMint) (contracts/HoodCoinManager.sol#407)
+	External calls sending eth:
+	- success = _safeTransferETH(treasury,CREATION_FEE) (contracts/HoodCoinManager.sol#282)
+		- (success,None) = to.call{gas: 2300,value: amount}() (contracts/HoodCoinManager.sol#465)
+	- _mintTokens(tokenAddress,initialPurchaseAmount,type()(uint256).max,msg.sender) (contracts/HoodCoinManager.sol#287-292)
+		- (success,None) = to.call{gas: 2300,value: amount}() (contracts/HoodCoinManager.sol#465)
+	State variables written after the call(s):
+	- _mintTokens(tokenAddress,initialPurchaseAmount,type()(uint256).max,msg.sender) (contracts/HoodCoinManager.sol#287-292)
+		- info.reserveBalance += ethCost - royalty (contracts/HoodCoinManager.sol#392)
+		- info.readyForMigration = true (contracts/HoodCoinManager.sol#402)
+	HoodCoinManager.tokenInfo (contracts/HoodCoinManager.sol#55) can be used in cross function reentrancies:
+	- HoodCoinManager._getStepsArray(address) (contracts/HoodCoinManager.sol#307-318)
+	- HoodCoinManager._migrateToUniswap(address) (contracts/HoodCoinManager.sol#733-815)
+	- HoodCoinManager.calculateTokensForEth(address,uint256) (contracts/HoodCoinManager.sol#488-547)
+	- HoodCoinManager.getCurrentTokenPrice(address) (contracts/HoodCoinManager.sol#817-827)
+	- HoodCoinManager.getMigrationProgress(address) (contracts/HoodCoinManager.sol#897-940)
+	- HoodCoinManager.getTokensReadyForMigration() (contracts/HoodCoinManager.sol#695-731)
+	- HoodCoinManager.migrateReadyToken(address,uint256) (contracts/HoodCoinManager.sol#657-692)
+	- HoodCoinManager.tokenInfo (contracts/HoodCoinManager.sol#55)
+	- HoodCoinManager.triggerMigration(address) (contracts/HoodCoinManager.sol#835-840)
+Reentrancy in HoodCoinManager.migrateReadyToken(address,uint256) (contracts/HoodCoinManager.sol#657-692):
+	External calls:
+	- sent = _safeTransferETH(migrator,gasFeeAmount) (contracts/HoodCoinManager.sol#686)
+		- (success,None) = to.call{gas: 2300,value: amount}() (contracts/HoodCoinManager.sol#465)
+	- _migrateToUniswap(token) (contracts/HoodCoinManager.sol#691)
+		- tokenContract.mint(address(this),tokensForLiquidity) (contracts/HoodCoinManager.sol#767)
+		- tokenContract.approve(UNISWAP_ROUTER,tokensForLiquidity) (contracts/HoodCoinManager.sol#768)
+		- (tokenAmount,ethAmount,None) = router.addLiquidityETH{value: ethForLiquidity}(token,tokensForLiquidity,(tokensForLiquidity * 95) / 100,(ethForLiquidity * 95) / 100,address(0),block.timestamp + 600) (contracts/HoodCoinManager.sol#772-781)
+		- tokenContract.mint(creatorAddress,creatorTokens) (contracts/HoodCoinManager.sol#798)
+		- tokenContract.mint(treasury,treasuryTokens) (contracts/HoodCoinManager.sol#799)
+		- (sentCreator,None) = creatorAddress.call{value: creatorEth}() (contracts/HoodCoinManager.sol#809)
+		- (sentTreasury,None) = treasury.call{value: treasuryEth}() (contracts/HoodCoinManager.sol#812)
+	External calls sending eth:
+	- sent = _safeTransferETH(migrator,gasFeeAmount) (contracts/HoodCoinManager.sol#686)
+		- (success,None) = to.call{gas: 2300,value: amount}() (contracts/HoodCoinManager.sol#465)
+	- _migrateToUniswap(token) (contracts/HoodCoinManager.sol#691)
+		- (tokenAmount,ethAmount,None) = router.addLiquidityETH{value: ethForLiquidity}(token,tokensForLiquidity,(tokensForLiquidity * 95) / 100,(ethForLiquidity * 95) / 100,address(0),block.timestamp + 600) (contracts/HoodCoinManager.sol#772-781)
+		- (sentCreator,None) = creatorAddress.call{value: creatorEth}() (contracts/HoodCoinManager.sol#809)
+		- (sentTreasury,None) = treasury.call{value: treasuryEth}() (contracts/HoodCoinManager.sol#812)
+	State variables written after the call(s):
+	- _migrateToUniswap(token) (contracts/HoodCoinManager.sol#691)
+		- info.migrated = true (contracts/HoodCoinManager.sol#761)
+		- info.reserveBalance = 0 (contracts/HoodCoinManager.sol#762)
+	HoodCoinManager.tokenInfo (contracts/HoodCoinManager.sol#55) can be used in cross function reentrancies:
+	- HoodCoinManager._getStepsArray(address) (contracts/HoodCoinManager.sol#307-318)
+	- HoodCoinManager._migrateToUniswap(address) (contracts/HoodCoinManager.sol#733-815)
+	- HoodCoinManager.calculateTokensForEth(address,uint256) (contracts/HoodCoinManager.sol#488-547)
+	- HoodCoinManager.getCurrentTokenPrice(address) (contracts/HoodCoinManager.sol#817-827)
+	- HoodCoinManager.getMigrationProgress(address) (contracts/HoodCoinManager.sol#897-940)
+	- HoodCoinManager.getTokensReadyForMigration() (contracts/HoodCoinManager.sol#695-731)
+	- HoodCoinManager.migrateReadyToken(address,uint256) (contracts/HoodCoinManager.sol#657-692)
+	- HoodCoinManager.tokenInfo (contracts/HoodCoinManager.sol#55)
+	- HoodCoinManager.triggerMigration(address) (contracts/HoodCoinManager.sol#835-840)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities
+
+Reentrancy in HoodCoinManager._safeTransferETH(address,uint256) (contracts/HoodCoinManager.sol#455-469):
+	External calls:
+	- (success,None) = to.call{gas: 2300,value: amount}() (contracts/HoodCoinManager.sol#465)
+	Event emitted after the call(s):
+	- DebugTransfer(Transfer Result,to,amount,success) (contracts/HoodCoinManager.sol#467)
+Reentrancy in HoodCoinManager.migrateReadyToken(address,uint256) (contracts/HoodCoinManager.sol#657-692):
+	External calls:
+	- sent = _safeTransferETH(migrator,gasFeeAmount) (contracts/HoodCoinManager.sol#686)
+		- (success,None) = to.call{gas: 2300,value: amount}() (contracts/HoodCoinManager.sol#465)
+	- _migrateToUniswap(token) (contracts/HoodCoinManager.sol#691)
+		- tokenContract.mint(address(this),tokensForLiquidity) (contracts/HoodCoinManager.sol#767)
+		- tokenContract.approve(UNISWAP_ROUTER,tokensForLiquidity) (contracts/HoodCoinManager.sol#768)
+		- (tokenAmount,ethAmount,None) = router.addLiquidityETH{value: ethForLiquidity}(token,tokensForLiquidity,(tokensForLiquidity * 95) / 100,(ethForLiquidity * 95) / 100,address(0),block.timestamp + 600) (contracts/HoodCoinManager.sol#772-781)
+		- tokenContract.mint(creatorAddress,creatorTokens) (contracts/HoodCoinManager.sol#798)
+		- tokenContract.mint(treasury,treasuryTokens) (contracts/HoodCoinManager.sol#799)
+		- (sentCreator,None) = creatorAddress.call{value: creatorEth}() (contracts/HoodCoinManager.sol#809)
+		- (sentTreasury,None) = treasury.call{value: treasuryEth}() (contracts/HoodCoinManager.sol#812)
+	External calls sending eth:
+	- sent = _safeTransferETH(migrator,gasFeeAmount) (contracts/HoodCoinManager.sol#686)
+		- (success,None) = to.call{gas: 2300,value: amount}() (contracts/HoodCoinManager.sol#465)
+	- _migrateToUniswap(token) (contracts/HoodCoinManager.sol#691)
+		- (tokenAmount,ethAmount,None) = router.addLiquidityETH{value: ethForLiquidity}(token,tokensForLiquidity,(tokensForLiquidity * 95) / 100,(ethForLiquidity * 95) / 100,address(0),block.timestamp + 600) (contracts/HoodCoinManager.sol#772-781)
+		- (sentCreator,None) = creatorAddress.call{value: creatorEth}() (contracts/HoodCoinManager.sol#809)
+		- (sentTreasury,None) = treasury.call{value: treasuryEth}() (contracts/HoodCoinManager.sol#812)
+	Event emitted after the call(s):
+	- TokenMigrated(token,0,0) (contracts/HoodCoinManager.sol#764)
+		- _migrateToUniswap(token) (contracts/HoodCoinManager.sol#691)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3
+. analyzed (20 contracts with 3 detectors), 4 result(s) found
